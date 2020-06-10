@@ -3,3 +3,8 @@ os: linux
 files:
   - source: /
     destination: /var/www/app
+hooks:
+  ApplicationStart:
+    - location: hooks/start.sh
+      timeout: 180
+      runas: root
